@@ -1,0 +1,3 @@
+-- Projet : Trouve ton artisan
+-- Description : alimentation de la base avec le jeu d'essai
+-- Le script sera complété après la création des tables.

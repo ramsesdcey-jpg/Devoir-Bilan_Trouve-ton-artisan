@@ -1,0 +1,3 @@
+-- Projet : Trouve ton artisan
+-- Description : création de la base de données et des tables
+-- Le script sera complété pendant la phase de conception des données.
