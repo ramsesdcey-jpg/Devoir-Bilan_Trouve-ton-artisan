@@ -1,0 +1,162 @@
+.home {
+    padding: 5rem 2rem 7rem;
+
+    &_mobile-search {
+        display: none;
+    }
+
+    &_how-to {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+
+        width: min(100%, 75rem);
+        margin-inline: auto;
+    }
+
+    &_how-to-content {
+        flex: 1;
+
+        h1 {
+            margin-bottom: 2rem;
+            color: #00497c;
+        }
+
+        ol {
+            padding-left: 1.5rem;
+            color: #384050;
+            line-height: 1.5;
+        }
+    }
+
+    &_how-to-image {
+        flex: 1;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 30rem;
+
+            border-radius: 0.4rem;
+            box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    &_top {
+        width: min(100%, 70rem);
+        margin: 5rem auto 0;
+
+        h2 {
+            margin-bottom: 2.5rem;
+            color: #00497c;
+            text-align: center;
+        }
+    }
+
+    &_top-cards {
+        display: grid;
+        grid-template-columns: repeat(
+            3,
+            minmax(14rem, 18rem)
+        );
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 4rem;
+
+        &_mobile-search {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        &_how-to {
+            position: relative;
+            display: block;
+
+            width: 100%;
+            margin: 0;
+
+            overflow: hidden;
+        }
+
+        &_how-to-image {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+
+                object-fit: cover;
+
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+        &_how-to::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-color: rgba(0, 73, 124, 0.25);
+
+            z-index: 1;
+        }
+
+        &_how-to-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 2.5rem 1rem;
+
+            h1 {
+                margin: 0 0 2rem;
+
+                color: #00497c;
+                font-size: 1.4rem;
+            }
+
+            ol {
+                margin: 0;
+                padding-left: 1.5rem;
+
+                color: #ffffff;
+                line-height: 1.35;
+            }
+        }
+
+        &_top {
+            width: 100%;
+            margin: 4rem auto 0;
+            padding: 0 2rem;
+
+            h2 {
+                margin-bottom: 2rem;
+
+                font-size: 1.5rem;
+            }
+        }
+
+        &_top-cards {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 2rem;
+        }
+
+        &_top-cards .artisan-card {
+            width: min(100%, 18rem);
+        }
+    }
+}

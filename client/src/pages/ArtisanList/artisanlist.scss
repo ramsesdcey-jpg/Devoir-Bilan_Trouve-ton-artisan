@@ -1,0 +1,26 @@
+.artisan-list {
+    padding: 4rem 2rem;
+
+    &_container {
+        width: min(100%, 75rem);
+        margin-inline: auto;
+        padding: 3rem;
+
+        background-color: #f1f8fc;
+        border-radius: 4rem;
+    }
+
+    &_cards {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(14rem, 15rem)
+        );
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &_empty {
+        color: #83888c;
+    }
+}

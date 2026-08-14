@@ -1,31 +1,45 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 # Dépendances Node.js
 node_modules/
 
 # Variables d'environnement
 .env
-.env.local
-.env.development.local
-.env.production.local
+.env.*
+!.env.example
 
 # Fichiers de compilation
 dist/
+dist-ssr/
 build/
 
 # Rapports de tests
 coverage/
 
-# Journaux
-*.log
-logs/
+# Fichiers locaux
+*.local
 
-# Fichiers du système
-.DS_Store
-Thumbs.db
-
-# Fichiers temporaires des éditeurs
+# Éditeurs
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+.idea/
 
-# Fichiers MySQL temporaires
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers divers
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 *.pid

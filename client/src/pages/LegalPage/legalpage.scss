@@ -1,0 +1,28 @@
+.legal-page {
+    min-height: 60vh;
+    padding: 5rem 2rem;
+
+    &_header {
+        width: min(100%, 75rem);
+        margin: 0 auto 2rem;
+
+        h1 {
+            margin: 0;
+            color: #00497c;
+        }
+    }
+
+    &_message {
+        width: min(100%, 75rem);
+        margin-inline: auto;
+        padding: 4rem;
+
+        background-color: #f1f8fc;
+        border-radius: 4rem;
+
+        p {
+            margin: 0;
+            color: #83888c;
+        }
+    }
+}

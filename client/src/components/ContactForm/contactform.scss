@@ -1,0 +1,131 @@
+.contact-form {
+    width: min(100%, 65rem);
+    margin-inline: auto;
+    padding: 2rem 2.5rem;
+
+    background-color: #f1f8fc;
+    border: 3px solid #82b864;
+
+    &_title {
+        margin: 0 0 2rem;
+
+        color: #82b864;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &_row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 1.5rem;
+
+        input {
+            width: 100%;
+            padding: 0.65rem 0.9rem;
+
+            font: inherit;
+
+            background-color: #ffffff;
+            border: 1px solid #82b864;
+            border-radius: 0;
+        }
+
+        label {
+            min-width: 6rem;
+            color: #384050;
+
+            span {
+                margin-right: 0.15rem;
+                color: #cd2c2e;
+            }
+        }
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 10rem;
+        padding: 0.9rem;
+
+        font: inherit;
+
+        background-color: #ffffff;
+        border: 1px solid #82b864;
+        border-radius: 0;
+        resize: vertical;
+    }
+
+    &_button {
+        align-self: flex-end;
+
+        padding: 0;
+
+        color: #82b864;
+        font: inherit;
+        font-weight: 600;
+        text-decoration: underline;
+
+        cursor: pointer;
+        background: none;
+        border: 0;
+    }
+
+    &_success {
+        color: #18753c;
+    }
+
+    &_error {
+        color: #cd2c2e;
+    }
+
+    @media (max-width: 768px) {
+        .contact-form {
+            width: 100%;
+            padding: 1.5rem;
+
+            &_title {
+                margin-bottom: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            &_form {
+                gap: 1rem;
+            }
+
+            &_row {
+                grid-template-columns: 1fr auto;
+                gap: 0.5rem;
+
+                input {
+                    min-width: 0;
+                    padding: 0.65rem;
+                }
+
+                label {
+                    min-width: auto;
+                    font-size: 0.9rem;
+                }
+            }
+
+            textarea {
+                min-height: 8rem;
+            }
+
+            &_button {
+                align-self: center;
+                margin-top: 0.5rem;
+            }
+
+            &_success,
+            &_error {
+                text-align: center;
+            }
+        }
+    }
+}
